@@ -1,3 +1,4 @@
+
 import cv2
 import numpy as np
 import face_recognition
@@ -85,7 +86,7 @@ while True:
             cv2.putText(img, name, (x1 + 6, y2 - 6), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 2)
             markAttendance(name)
             d = {'rollNo':roll_No, 'classYr':year, 'stdName':name, 'attDate':dtstring1, 'attTime':dtstring, 'createdDate':dtstring1, 'attHr':attHr}
-            requests.post("https://apex.oracle.com/pls/apex/face_rec/face/markAttendance", data=d)
+            #requests.post("https://apex.oracle.com/pls/apex/face_rec/face/markAttendance", data=d)
         else:
             name = "not identified"
             y1, x2, y2, x1 = faceLoc
